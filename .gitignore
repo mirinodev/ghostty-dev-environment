@@ -30,3 +30,6 @@ _docs/issues/
 
 # implementation logs (local only)
 _docs/templates/
+
+# Claude Code local settings (Herdr hook の live テスト台。ハーネスへの着地は別 issue)
+.claude/settings.local.json
