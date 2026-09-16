@@ -7,7 +7,7 @@
 
 - **メモリ節約**: VSCode（Electron）を丸ごと排除できる
 - **起動速度**: ターミナルベースなので一瞬で立ち上がる
-- **AI エージェント並列運用**: Herdr が各ペインの Claude Code 等を自動検知し、サイドバーで状態 (作業中 / 入力待ち / 完了) を一覧できる。入力待ちや完了は、サイドバーの印と音で知らせる
+- **AI エージェント並列運用**: Herdr が各ペインの Claude Code 等を自動検知し、サイドバーで状態 (作業中 / 入力待ち / 完了) を一覧できる。入力待ちや完了は、サイドバーの印で知らせる
 - **セッション保持**: セッションは herdr server が持つので、Ghostty を閉じてもエージェントは走り続ける
 - **カスタマイズ性**: 各ツールが独立しているので、好みに合わせて差し替え可能
 
@@ -141,10 +141,6 @@ keybind = super+shift+d=text:\x11-
 [theme]
 name = "terminal"          # Ghostty の配色をそのまま使う
 
-[theme.custom]
-accent = "#e63946"         # フォーカス中のペインの枠 / 選択中のタブ (旧 zellij の naruto の赤)
-overlay0 = "#BF616A"       # それ以外のペインの枠 / 選択していないタブの文字
-
 [terminal]
 new_cwd = "follow"         # 新規ペインは元ペインの CWD を引き継ぐ
 
@@ -156,6 +152,9 @@ prompt_new_tab_name = false
 
 [ui.toast]
 delivery = "off"           # 完了通知は Claude Code の Stop hook に任せる (terminal だと Ghostty 経由で二重に出る)
+
+[ui.sound]
+enabled = false            # 見ていない workspace で状態が変わるたびに鳴るので切る
 
 [experimental]
 switch_ascii_input_source_in_prefix = true   # 日本語 IME が ON でも prefix が通る
