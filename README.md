@@ -141,6 +141,10 @@ keybind = super+shift+d=text:\x11-
 [theme]
 name = "terminal"          # Ghostty の配色をそのまま使う
 
+[theme.custom]
+accent = "#e63946"         # フォーカス中のペインの枠 / 選択中のタブ (旧 zellij の naruto の赤)
+overlay0 = "#BF616A"       # それ以外のペインの枠 / 選択していないタブの文字
+
 [terminal]
 new_cwd = "follow"         # 新規ペインは元ペインの CWD を引き継ぐ
 
@@ -151,7 +155,7 @@ prefix = "ctrl+q"          # 既定の ctrl+b は Claude Code / vim と衝突す
 prompt_new_tab_name = false
 
 [ui.toast]
-delivery = "terminal"      # Ghostty 経由で macOS 通知
+delivery = "off"           # 完了通知は Claude Code の Stop hook に任せる (terminal だと Ghostty 経由で二重に出る)
 
 [experimental]
 switch_ascii_input_source_in_prefix = true   # 日本語 IME が ON でも prefix が通る
