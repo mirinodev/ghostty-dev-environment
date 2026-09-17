@@ -41,6 +41,7 @@ Herdr の prefix は `Ctrl+Q`。ただし日常操作は **Ghostty 側の Cmd �
 | `Cmd+R` | リサイズモード | `prefix+r` |
 | `Cmd+B` | サイドバー (Agents 一覧) 表示切替 | `prefix+b` |
 | `Cmd+N` | 新規ワークスペース (プロジェクト単位) | `prefix+Shift+N` |
+| `Ctrl+Tab` / `Ctrl+Shift+Tab` | 下 / 上の space へ移動 | `prefix+Shift+J` / `prefix+Shift+K` (`next_workspace` / `previous_workspace` を config.toml で割当) |
 | `Cmd+Shift+G` | 新規 git worktree | `prefix+Shift+G` |
 | `Cmd+G` | セッションを選ぶ画面 (session navigator) | `prefix+g` |
 | `Cmd+O` | 通知元のエージェントへジャンプ | `prefix+o` |
@@ -148,6 +149,8 @@ new_cwd = "follow"         # 新規ペインは元ペインの CWD を引き継�
 
 [keys]
 prefix = "ctrl+q"          # 既定の ctrl+b は Claude Code / vim と衝突する
+next_workspace = "prefix+shift+j"      # Ghostty の Ctrl+Tab から呼ぶ
+previous_workspace = "prefix+shift+k"  # Ghostty の Ctrl+Shift+Tab から呼ぶ
 
 [ui]
 prompt_new_tab_name = false
