@@ -42,10 +42,12 @@ Herdr の prefix は `Ctrl+Q`。ただし日常操作は **Ghostty 側の Cmd �
 | `Cmd+B` | サイドバー (Agents 一覧) 表示切替 | `prefix+b` |
 | `Cmd+N` | 新規ワークスペース (プロジェクト単位) | `prefix+Shift+N` |
 | `Cmd+Shift+G` | 新規 git worktree | `prefix+Shift+G` |
-| `Cmd+G` | ナビゲート (ワークスペース / ペインへジャンプ) | `prefix+g` |
+| `Cmd+G` | セッションを選ぶ画面 (session navigator) | `prefix+g` |
 | `Cmd+O` | 通知元のエージェントへジャンプ | `prefix+o` |
 | `Cmd+Shift+R` / `Cmd+Opt+R` | タブ名 / ペイン名の変更 | `prefix+Shift+T` / `prefix+Shift+P` |
 | `Cmd+K` | 画面クリア (`Ctrl+L` をペインへ) | — |
+| `Cmd+Shift+N` | Ghostty の新しいウィンドウ (同じ Herdr に別の画面としてつながる。space はウィンドウごとに切り替えられる) | — |
+| `Cmd+Opt+N` | 2 つに割れた Ghostty の片方を別ウィンドウへ出す (その側の Herdr を切り離して閉じ、新しいウィンドウを開く) | `prefix+q` → 新規ウィンドウ |
 | `Ctrl+;` | `continue` + Enter を送る (Claude Code 再開用) | — |
 | `Ctrl+Q` → `?` | Herdr の全キー一覧 | `prefix+?` |
 | `Ctrl+Q` → `q` | デタッチ (エージェントは走り続ける) | `prefix+q` |
